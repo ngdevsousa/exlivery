@@ -16,6 +16,8 @@ defmodule Exlivery.Orders.Agent do
 
   def get(id), do: Agent.get(__MODULE__, &get_by_id(&1, id))
 
+  def find_all, do: Agent.get(__MODULE__, & &1)
+
   defp get_by_id(state, id) do
     case Map.get(state, id) do
       nil -> {:error, "Order not found"}
