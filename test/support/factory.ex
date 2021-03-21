@@ -26,4 +26,14 @@ defmodule Exlivery.Factory do
       user_cpf: "000.000.000-00"
     }
   end
+
+  def user_params_factory do
+    %{
+      address: "Av. Zero",
+      age: 24,
+      cpf: "000.000.000-00",
+      email: "foo@email.com",
+      name: "foo"
+    }
+  end
 end
